@@ -238,6 +238,8 @@
                     url: options.url,
                     dataType: options.dataType,
                     data: data,
+                    type: options.params != undefined ? options.params.type || undefined : undefined,
+                    contentType: options.params != undefined ? options.params.contentType || undefined : undefined,
                     success: function (data) {
                         if (requestNumber < requestSequence) {
                             return;
